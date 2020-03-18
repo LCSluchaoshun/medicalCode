@@ -7,7 +7,7 @@
                     <img class="item-img" :src="imgMedicine" alt="">
                     <span class="item-title">胃肠息肉</span>
                 </div>
-                <div class="item">
+                <div class="item" @click.stop="handlePOEM">
                     <img class="item-img" :src="imgBook" alt="">
                     <span class="item-title">POEM</span>
                 </div>
@@ -67,6 +67,9 @@
         methods:{
             handleStomachNav(){
                 this.$router.push({name:'StomachNav'})
+            },
+            handlePOEM(){
+                this.$router.push({name:'POEM'})
             }
         }
 
@@ -92,19 +95,15 @@
         }
     }
     .home {
-        display flex
-        flex-direction column
-        justify-content space-between
-        height 100vh
+        height 100%
         background grayF
         padding-top vw(43)
         .nav {
-
+            margin-top vw(85)
             padding 0 vw(28)
             .top {
                 flex-x()
             }
-
             .bottom {
                 margin-top vw(40)
                 flex-x(flex-start)
@@ -117,6 +116,7 @@
 
     .bottom-img{
         width 100vw
+        margin-top vw(80)
         padding-bottom vw(19)
         text-align center
         img{

@@ -41,9 +41,11 @@
             word-vw(word24, gray3)
         }
         .medical {
+            flex-x(center)
             margin-top vw(23.5)
         }
         .address {
+            flex-x(center)
             margin-top vw(15)
         }
 

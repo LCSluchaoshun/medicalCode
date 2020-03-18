@@ -1,5 +1,6 @@
 const Home = () => import('@/views/home');
  const StomachNav = () =>import('@/views/stomachNav')
+ const POEM = () =>import('@/views/POEM')
 export default [
     {
         path: '/',
@@ -9,10 +10,14 @@ export default [
     {
         path: '/home',
         name: 'home',
-        component: Home,
+        component: Home
     }, {
         path: '/stomach-nav',
         name: 'StomachNav',
-        component: StomachNav,
+        component: StomachNav
+    } ,{
+        path: '/POEM',
+        name: 'POEM',
+        component: POEM
     }
 ];
