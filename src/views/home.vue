@@ -3,7 +3,7 @@
         <header-title></header-title>
         <div class="nav">
             <div class="top">
-                <div class="item">
+                <div class="item" @click.stop="handleStomachNav">
                     <img class="item-img" :src="imgMedicine" alt="">
                     <span class="item-title">胃肠息肉</span>
                 </div>
@@ -64,6 +64,11 @@
                 imgMedicineBottle: img_MedicineBottle
             };
         },
+        methods:{
+            handleStomachNav(){
+                this.$router.push({name:'StomachNav'})
+            }
+        }
 
     };
 </script>

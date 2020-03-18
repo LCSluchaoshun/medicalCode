@@ -1,5 +1,5 @@
 const Home = () => import('@/views/home');
-
+ const StomachNav = () =>import('@/views/stomachNav')
 export default [
     {
         path: '/',
@@ -10,9 +10,9 @@ export default [
         path: '/home',
         name: 'home',
         component: Home,
-        meta: {
-            keepAlive: true,
-            tab: true
-        }
+    }, {
+        path: '/stomach-nav',
+        name: 'StomachNav',
+        component: StomachNav,
     }
 ];
