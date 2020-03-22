@@ -11,21 +11,21 @@
                     <img class="item-img" :src="imgBook" alt="">
                     <span class="item-title">POEM</span>
                 </div>
-                <div class="item">
+                <div class="item" @click.stop="handlePOEM">
                     <img class="item-img" :src="imgMedicalLogo" alt="">
                     <span class="item-title">ERCP</span>
                 </div>
-                <div class="item">
+                <div class="item" @click.stop="handleStop">
                     <img class="item-img" :src="imgMagnifier" alt="">
                     <span class="item-title">内镜安全</span>
                 </div>
             </div>
             <div class="bottom">
-                <div class="item">
+                <div class="item" @click.stop="handleStop">
                     <img class="item-img" :src="imgDrug" alt="">
                     <span class="item-title">胶囊内镜</span>
                 </div>
-                <div class="item">
+                <div class="item" @click.stop="handleStop">
                     <img class="item-img" :src="imgMedicineBottle" alt="">
                     <span class="item-title">肠镜</span>
                 </div>
@@ -64,12 +64,18 @@
                 imgMedicineBottle: img_MedicineBottle
             };
         },
+        mounted(){
+            document.title = "首页";
+        },
         methods:{
             handleStomachNav(){
                 this.$router.push({name:'StomachNav'})
             },
             handlePOEM(){
                 this.$router.push({name:'POEM'})
+            },
+            handleStop(){
+                this.$toast('此功能暂未开放哟')
             }
         }
 

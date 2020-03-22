@@ -59,7 +59,7 @@ module.exports = {
             })
         ]
     },
-     // publicPath:'./',
+     publicPath:'./',
     chainWebpack: config => {
         // 通过 html-webpack-plugin注入到 index.html
         config.plugin('html').tap(args => {

@@ -2,19 +2,19 @@
 // 协议
 const protocol = window.protocal ? window.protocal : process.env.NODE_ENV === 'production' ? 'https' : 'http';
 // mock环境
-const mock_baseUrl = `${protocol}://101.200.54.239:7777/mock/5c1f5f763b9c0c22d4b7bbb7`;
+const mock_baseUrl = `${protocol}:`;
 // 开发(联调)环境
-const dev_baseUrl = `${protocol}://api.huishou.dev.test.datounet.com`;
+const dev_baseUrl = `${protocol}:`;
 // 测试环境
-const test_baseUrl = `${protocol}://api.yijia.qa.test.datounet.com`;
+const test_baseUrl = `${protocol}:`;
 // 生产环境
-const pro_baseUrl = `${protocol}://api.yijia.ishangtui.com`;
+const pro_baseUrl = `${protocol}:`;
 
 // api请求地址
 export const baseUrl = getBaseUrl();
 
 // 静态图片域名 - OSS
-export const oss_baseUrl = `${protocol}://iryoss3-0.oss-cn-beijing.aliyuncs.com`;
+export const oss_baseUrl = `${protocol}:`;
 
 // 错误码常量
 export const errCode = {

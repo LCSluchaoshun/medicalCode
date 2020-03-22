@@ -17,13 +17,13 @@
                 <div class="title">贲门失弛缓症的病因是什么？</div>
                 <div class="msg">1、原发性贲门失弛缓症的病因可能与病毒感染、自身免疫因素及遗传因素有关。</div>
             </div>
-            <div class="img">
+            <div class="img1">
                 <img :src="imgPOEM2" alt="贲门失弛缓症的病因是什么">
             </div>
             <div class="content">
                 <div class="msg">2、继发性贲门失弛缓症指其继发于某些明确疾病，迷走神经切断术、胃窦切除术等。</div>
             </div>
-            <div class="img">
+            <div class="img2">
                 <img :src="imgPOEM3" alt="贲门失弛缓症的病因是什么">
             </div>
         </div>
@@ -125,6 +125,13 @@
                 imgPOEM7: img_POEM7,
             };
         },
+        mounted(){
+            document.title = "认识贲门失驰缓症";
+            window.scrollTo({
+                top:0,
+                behavior:'instant'
+            })
+        },
         methods: {}
 
     };
@@ -191,14 +198,21 @@
             }
         }
 
-        .img {
+        .img1 {
+            margin-top vw(18)
+            text-align center
+            img {
+                width vw(351)
+                height vw(248)
+            }
+        }
+        .img2 {
             margin-top vw(18)
             text-align center
             img {
                 width vw(351)
                 height vw(197)
             }
-
         }
     }
 
@@ -338,7 +352,7 @@
             text-align center
             img {
                 width vw(351)
-                height vw(179.6)
+                height vw(217.5)
             }
 
         }

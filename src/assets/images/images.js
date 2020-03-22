@@ -26,3 +26,9 @@ export const img_POEM4 = require('./POEM4.png');
 export const img_POEM5 = require('./POEM5.png');
 export const img_POEM6 = require('./POEM6.png');
 export const img_POEM7 = require('./POEM7.png');
+
+
+export const img_Consultation = require('./consultation.png');
+export const img_Xing = require('./xing.png');
+export const img_NoSelected = require('./noSelected.png');
+export const img_Selected = require('./selected.png');

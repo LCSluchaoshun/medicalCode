@@ -1,18 +1,34 @@
 <template>
-    <div class="home" id="homeId">
+    <div class="home">
         <header-title></header-title>
         <div class="nav">
+            <!--<van-collapse v-model="activeNames">-->
+            <!--<template v-for="(item,index) in navData" >-->
+            <!--<van-collapse-item :title="item" :name="index" class="navBox">-->
+            <!--<div class="content" :class="contentStyle(index)">-->
+            <!--<div class="item" v-for="i in contentData">-->
+            <!--<div class="content-title">{{i.title}}</div>-->
+            <!--<img :src="i.img" :alt="i.title">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</van-collapse-item>-->
+            <!--</template>-->
+
+            <!--</van-collapse>-->
             <div v-for=" (item,index) in navData" class="navBox" :key="index">
-                <div @click.stop="downClick(index,item)" class="title" :class="item.status?'activeStyle':''">
-                    <span>{{item.title}}</span>
-                    <van-icon name="arrow" v-if="index+1 ===5 "/>
-                    <van-icon name="arrow-up" color="#fff" v-else-if="item.status"/>
+                <div @click.stop="downClick(index)" class="title" :class="index === active?'activeStyle':''">
+                    <span>{{item}}</span>
+                    <van-icon name="arrow" v-if="index === 5"/>
+                    <van-icon name="arrow-up" color="#fff" v-else-if="index === active"/>
                     <van-icon name="arrow-down" color="#333" v-else/>
                 </div>
-                <div class="content" v-show="item.status && index+1 !==5">
-                    <div class="item" v-for="i in contentData">
-                        <div class="content-title">{{i.title}}</div>
-                        <img :src="i.img" :alt="i.title">
+                <!--v-show="index === active && index + 1 !== 5"-->
+                <div :class="index === active?'contentStyle':'contentShowStyle'">
+                    <div class="content">
+                        <div class="item" v-for="i in contentData">
+                            <div class="content-title">{{i.title}}</div>
+                            <img :src="i.img" :alt="i.title">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,7 +40,6 @@
 </template>
 
 <script>
-
     import {img_bottomImg, img_1, img_2, img_3, img_4} from '../assets/images/images';
     import HeaderTitle from '../components/medical/headerTitle.vue'
 
@@ -33,22 +48,8 @@
         components: {HeaderTitle},
         data() {
             return {
-                navData: [{
-                    title:'接收住院通知',
-                    status:false,
-                },{
-                    title:'当日住院流程',
-                    status:false,
-                },{
-                    title:'次日住院流程',
-                    status:false,
-                },{
-                    title:'特殊注意事项',
-                    status:false,
-                },{
-                    title:'我要咨询',
-                    status:false,
-                },],
+                activeNames: ['0'],
+                navData: ['接收住院通知', '入院携带物品', '当日住院流程', '次日住院流程', '特殊注意事项', '我要咨询'],
                 contentData: [
                     {title: '医保卡、住院证', img: img_1},
                     {title: '病历资料、押金', img: img_2},
@@ -56,25 +57,50 @@
                     {title: '个人生活用品、无色糖块', img: img_4},
                 ],
                 imgBottomImg: img_bottomImg,
-                active: 0,
-                activeStyle: ''
+                active: -1,
+                activeStyle: '',
+                conentStyle: '',
+                contentShowStyle: '',
             };
         },
         mounted() {
-            window.scrollTo(0, 0);
+            document.title = "北京友谊医院消化中心内镜手术流程与注意事项";
+            window.scrollTo({
+                top:0,
+                behavior:'instant'
+            })
         },
         methods: {
-            downClick(index,item) {
-                item.status = !item.status
-//                if (index + 1 == this.active) {
-//                    this.active = 0
-//                } else {
-//                    this.active = index + 1
-//                }
-                if (index === 4) {
-                    this.$router.push({name: 'POEM'})
-                }
+            downClick(index) {
+                if (index == this.active) {
+                    this.active = -1
+                } else {
+                    this.active = index
+                  console.log();
+//
+//                    let top = this.heightToTop(document.getElementsByClassName('content')[index].target)
+                    console.log(document.getElementsByClassName('content')[index].offsetTop);
+                    if(document.getElementsByClassName('content')[index].offsetTop >46){
+                        window.scrollTo({
+                            top:document.getElementsByClassName('content')[index].offsetTop,
+                            behavior:'instant'
+                        })
+                    }
 
+                }
+                if (index === 5) {
+                    this.$router.push({name: 'consultation'})
+                }
+            },
+            heightToTop(ele) {
+                //ele为指定跳转到该位置的DOM节点
+                let root = document.body;
+                let height = 0;
+                do {
+                    height += ele.offsetTop;
+                    ele = ele.offsetParent;
+                } while (ele !== root)
+                return height;
             }
         }
 
@@ -97,16 +123,29 @@
         margin-top vw(30)
         padding 0 vw(27.5)
         .navBox {
-            border-bottom vw(12) solid #F6F6F6
+            border-bottom vw(3) solid #F6F6F6
             .title {
                 width vw(320)
                 height vw(45)
                 background #fff
                 flex-x()
                 padding 0 vw(32)
+                box-sizing border-box
+                border vw(1) solid #F6F6F6
             }
             .activeStyle {
                 background #2CBE94
+                color grayF
+            }
+            .contentShowStyle {
+                height 0
+                overflow-y hidden
+                transition: all .3s
+            }
+            .contentStyle {
+                height: vw(708);
+                overflow-y hidden
+                transition: all 0.3s
             }
             .content {
                 background #F9F9F9
@@ -125,6 +164,11 @@
             }
 
         }
+
+    }
+
+    .navBox:last-child {
+        border-bottom none
     }
 
     .bottom-img {

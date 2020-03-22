@@ -13,7 +13,7 @@ requireComponent.keys().forEach(fileName => {
 // 注册路由实例
 Vue.use(Router);
 const router = new Router({
-    mode: 'history',
+    // mode: 'history',
     routes: routers
 });
 
