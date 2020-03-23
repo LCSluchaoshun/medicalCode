@@ -125,7 +125,7 @@
     .home {
         height 100%
         width 100vw
-        background grayF
+        background-color #fafdff
         padding-top vw(37.5)
         .header {
             flex-y()

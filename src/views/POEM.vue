@@ -146,7 +146,7 @@
 
     .home {
         height 100%
-        background grayF
+        background-color #fafdff
         padding 0 vw(12)
         padding-top vw(37.5)
         flex-y()
@@ -161,6 +161,7 @@
         margin-top vw(34)
         border-bottom vw(12) solid #F6F6F6
         padding vw(25.5) vw(48.5) vw(32) vw(48)
+        background-color grayF
         .title {
             word-vw(word18, #252525)
             font-weight bold
@@ -183,6 +184,7 @@
 
     // 病因？
     .pathogeny {
+        background-color grayF
         border-bottom vw(12) solid #F6F6F6
         padding-top vw(25.5)
         .content{
@@ -218,6 +220,7 @@
 
     // 表现
     .performance {
+        background-color grayF
         border-bottom vw(12) solid #F6F6F6
         padding-top vw(25.5)
         .content{
@@ -269,6 +272,7 @@
 
     // 辅助检查
     .inspect {
+        background-color grayF
         border-bottom vw(12) solid #F6F6F6
         padding-top vw(25.5)
         .content{
@@ -307,6 +311,7 @@
 
     // 并发症
     .complication {
+        background-color grayF
         padding-top vw(25.5)
         .content{
             padding  0 vw(48)

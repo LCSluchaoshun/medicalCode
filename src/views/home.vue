@@ -72,7 +72,7 @@
                 this.$router.push({name:'StomachNav'})
             },
             handlePOEM(){
-                this.$router.push({name:'POEM'})
+                this.$router.push({name:'POEMNav'})
             },
             handleStop(){
                 this.$toast('此功能暂未开放哟')
@@ -102,7 +102,7 @@
     }
     .home {
         height 100%
-        background grayF
+        background-color #fafdff
         padding-top vw(43)
         .nav {
             margin-top vw(85)

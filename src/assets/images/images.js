@@ -27,6 +27,34 @@ export const img_POEM5 = require('./POEM5.png');
 export const img_POEM6 = require('./POEM6.png');
 export const img_POEM7 = require('./POEM7.png');
 
+// =====================接收入院通知============
+
+export const img_ruyuan1 = require('./ruyuan1.png');
+export const img_ruyuan2 = require('./ruyuan2.png');
+export const img_ruyuan3 = require('./ruyuan3.png');
+
+// =====================当日住院流程============
+
+export const img_zhuyuan1 = require('./zhuyuan1.png');
+export const img_zhuyuan2 = require('./zhuyuan2.png');
+export const img_zhuyuan3 = require('./zhuyuan3.png');
+export const img_zhuyuan4 = require('./zhuyuan4.png');
+export const img_zhuyuan5 = require('./zhuyuan5.png');
+
+// =====================次日住院流程============
+export const img_ciri1 = require('./ciri1.png');
+export const img_ciri2 = require('./ciri2.png');
+export const img_ciri3 = require('./ciri3.png');
+
+// =====================特殊注意事项============
+export const img_teshu1 = require('./teshu1.png');
+export const img_teshu2 = require('./teshu2.png');
+export const img_teshu3 = require('./teshu3.png');
+
+
+// ====================认识POEM术============
+export const img_KnowPOEM = require('./KnowPOEM.png');
+
 
 export const img_Consultation = require('./consultation.png');
 export const img_Xing = require('./xing.png');
