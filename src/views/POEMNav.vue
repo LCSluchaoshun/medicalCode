@@ -40,11 +40,15 @@
                     },
                     {
                         title:'POEM治疗后注意事项',
-                        name:'POEM'
+                        name:'AfterPOEM'
                     },
                     {
                         title:'出院后家庭管理',
-                        name:'POEM'
+                        name:'POEMLeave'
+                    },
+                    {
+                        title:'我要咨询',
+                        name:'consultation'
                     }],
                 imgBottomImg: img_bottomImg
             };

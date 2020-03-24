@@ -55,6 +55,45 @@ export const img_teshu3 = require('./teshu3.png');
 // ====================认识POEM术============
 export const img_KnowPOEM = require('./KnowPOEM.png');
 
+// ====================poem治疗后============
+export const img_AfterPoem1= require('./afterPoem1.png');
+export const img_AfterPoem2 = require('./afterPoem2.png');
+export const img_AfterPoem3 = require('./afterPoem3.png');
+export const img_AfterPoem4 = require('./afterPoem4.png');
+export const img_AfterPoem5 = require('./afterPoem5.png');
+
+
+// ====================poem 出院后============
+export const img_PoemLeave1= require('./poemLeave1.png');
+export const img_PoemLeave2 = require('./poemLeave2.png');
+export const img_PoemLeave3 = require('./poemLeave3.png');
+export const img_PoemLeave4 = require('./poemLeave4.png');
+export const img_PoemLeave5 = require('./poemLeave5.png');
+
+
+// ====================poem 出院后============
+export const img_ERCP1 = require('./ERCP1.png');
+export const img_ERCP2 = require('./ERCP2.png');
+export const img_ERCP3 = require('./ERCP3.png');
+export const img_ERCP4 = require('./ERCP4.png');
+export const img_ERCP5 = require('./ERCP5.png');
+export const img_ERCP6 = require('./ERCP6.png');
+export const img_ERCP7 = require('./ERCP7.png');
+export const img_ERCP8 = require('./ERCP8.png');
+export const img_ERCP9 = require('./ERCP9.png');
+
+
+// ====================ERCP术前============
+export const img_BeforeERCP1 = require('./beforeERCP1.png');
+export const img_BeforeERCP2 = require('./beforeERCP2.png');
+export const img_BeforeERCP3 = require('./beforeERCP3.png');
+export const img_BeforeERCP4 = require('./beforeERCP4.png');
+export const img_BeforeERCP5 = require('./beforeERCP5.png');
+export const img_BeforeERCP6 = require('./beforeERCP6.png');
+export const img_BeforeERCP7 = require('./beforeERCP7.png');
+export const img_BeforeERCP8 = require('./beforeERCP8.png');
+export const img_BeforeERCP9 = require('./beforeERCP9.png');
+
 
 export const img_Consultation = require('./consultation.png');
 export const img_Xing = require('./xing.png');

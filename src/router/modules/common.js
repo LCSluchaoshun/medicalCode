@@ -4,6 +4,11 @@ const Home = () => import('@/views/home');
  const POEMNav = () =>import('@/views/POEMNav')
  const KnowPOEM = () =>import('@/views/KnowPOEM')
  const BeforePOEM = () =>import('@/views/BeforePOEM')
+ const AfterPOEM = () =>import('@/views/afterPOEM')
+ const POEMLeave = () =>import('@/views/POEMLeave')
+ const ERCP = () =>import('@/views/ERCP')
+ const ERCPNav = () =>import('@/views/ERCPNav')
+ const BeforeERCP = () =>import('@/views/BeforeERCP')
  const Consultation = () =>import('@/views/consultation')
 export default [
     {
@@ -40,5 +45,30 @@ export default [
         path: '/before-poem',
         name: 'BeforePOEM',
         component: BeforePOEM
+    },
+    {
+        path: '/after-poem',
+        name: 'AfterPOEM',
+        component: AfterPOEM
+    },
+    {
+        path: '/poem-leave',
+        name: 'POEMLeave',
+        component: POEMLeave
+    },
+    {
+        path: '/ercp',
+        name: 'ERCP',
+        component: ERCP
+    },
+    {
+        path: '/ercp-nav',
+        name: 'ERCPNav',
+        component: ERCPNav
+    },
+    {
+        path: '/before-ercp',
+        name: 'BeforeERCP',
+        component: BeforeERCP
     }
 ];

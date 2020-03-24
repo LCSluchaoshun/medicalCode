@@ -11,7 +11,7 @@
                     <img class="item-img" :src="imgBook" alt="">
                     <span class="item-title">POEM</span>
                 </div>
-                <div class="item" @click.stop="handlePOEM">
+                <div class="item" @click.stop="handleERCP">
                     <img class="item-img" :src="imgMedicalLogo" alt="">
                     <span class="item-title">ERCP</span>
                 </div>
@@ -73,6 +73,9 @@
             },
             handlePOEM(){
                 this.$router.push({name:'POEMNav'})
+            },
+            handleERCP(){
+                this.$router.push({name:'ERCPNav'})
             },
             handleStop(){
                 this.$toast('此功能暂未开放哟')
