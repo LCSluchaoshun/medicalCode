@@ -95,6 +95,22 @@ export const img_BeforeERCP8 = require('./beforeERCP8.png');
 export const img_BeforeERCP9 = require('./beforeERCP9.png');
 
 
+// ====================ERCP术后============
+export const img_AfterERCP1 = require('./afterERCP1.png');
+export const img_AfterERCP2 = require('./afterERCP2.png');
+export const img_AfterERCP3 = require('./afterERCP3.png');
+export const img_AfterERCP4 = require('./afterERCP4.png');
+export const img_AfterERCP5 = require('./afterERCP5.png');
+
+
+// ====================ERCP 出院后============
+export const img_ErcpLeave1 = require('./ercpLeave1.png');
+export const img_ErcpLeave2 = require('./ercpLeave2.png');
+export const img_ErcpLeave3 = require('./ercpLeave3.png');
+export const img_ErcpLeave4 = require('./ercpLeave4.png');
+export const img_ErcpLeave5 = require('./ercpLeave5.png');
+
+
 export const img_Consultation = require('./consultation.png');
 export const img_Xing = require('./xing.png');
 export const img_NoSelected = require('./noSelected.png');

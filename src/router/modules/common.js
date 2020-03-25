@@ -10,6 +10,8 @@ const Home = () => import('@/views/home');
  const ERCPNav = () =>import('@/views/ERCPNav')
  const BeforeERCP = () =>import('@/views/BeforeERCP')
  const Consultation = () =>import('@/views/consultation')
+ const ERCPLeave = () =>import('@/views/ERCPLeave')
+ const AfterERCP = () =>import('@/views/afterERCP')
 export default [
     {
         path: '/',
@@ -70,5 +72,15 @@ export default [
         path: '/before-ercp',
         name: 'BeforeERCP',
         component: BeforeERCP
+    },
+    {
+        path: '/ercp-leave',
+        name: 'ERCPLeave',
+        component: ERCPLeave
+    },
+    {
+        path: '/after-ercp',
+        name: 'AfterERCP',
+        component: AfterERCP
     }
 ];
